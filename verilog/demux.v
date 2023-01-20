@@ -4,6 +4,7 @@ module demux(
     output reg [3:0] out0, out1, out2, out3 // 4 4-bit output signals
 );
     always @* begin
+        // use of <= because it is unblocking
         case(select)
             2'b00: out0 <= in;
             2'b01: out1 <= in;
