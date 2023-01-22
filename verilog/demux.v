@@ -5,6 +5,7 @@ module demux(
 );
     always @* begin
         // use of <= because it is unblocking
+        // rule of thumb is to always use <= inside of alawys
         case(select)
             2'b00: out0 <= in;
             2'b01: out1 <= in;
